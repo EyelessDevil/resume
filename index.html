@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Resume, Roma, HTML, CSS, JS">
+    <meta name="description" content="Это сайт-резюме Ромы Ли для потенциального работодателя IT компании">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+    <title>Resume by Roma Li</title>
+</head>
+<body>
+    <div class="container">
+
+        <header class="header">
+            <div class="dropdown">
+                <button class="header-btn dropdown-btn">Мои работы</button>
+                <div class="dropdown-content">
+                    <a href="#">Работа 1</a>
+                    <a href="#">Работа 2</a>
+                    <a href="#">Работа 3</a>
+                </div>
+            </div>
+            <button class="header-btn">Что-то еще</button>
+            <button class="header-btn" id="contact-btn">Связаться со мной</button>
+        </header>
+
+        <div class="info">
+            <img class="avatar" src="imgs/IMGL3242.jpg" alt="Моё фото">
+            <div class="info-text">
+                <h1>Рома Ли</h1>
+                <p>Я начинающий <strong>JavaScript Developer</strong> и будущий <strong>Frontend разработчик</strong></p>
+                <p>Но мои увлечения не заканчиваются на этом...
+                <br>Я творческий человек. Я люблю музыку: <em>пою, играю на гитаре и пишу собственные песни</em></p>
+
+                <h2>Мои социальные сети:</h2>
+                <a href="https://www.instagram.com/eyeless_devil/" target="_blank">Instagram</a>
+                |
+                <a href="https://t.me/Eyeless_devil" target="_blank">Telegram</a>
+                |
+                <a href="https://x.com/Crypt0xDeath" target="_blank">Twitter</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Мои хобби</h2>
+            <ul class="list">
+                <li>Музыка</li>
+                <li>Видеосъемка и монтаж</li>
+                <li>Криптоаналитика</li>
+                <li>Любить Лаботьку</li>
+                <li>Путишествия</li>
+            </ul>
+        </div>
+        <br>
+
+        <div class="card">
+            <h2>Опыт работы</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Название компании</th>
+                        <th>Должность</th>
+                        <th>Год</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>ОАО КСМ</td>
+                        <td>Разнорабочий</td>
+                        <td>2019 - 2020</td>
+                    </tr>
+                    <tr>
+                        <td>Domino's Pizza</td>
+                        <td>Курьер</td>
+                        <td>2020 - 2020</td>
+
+                    </tr>
+                    <tr>
+                        <td>Яндекс</td>
+                        <td>Водитель</td>
+                        <td>2020 - 2022</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>COLIZEUM</td>
+                        <td>Администратор</td>
+                        <td>2022 - 2022</td>
+
+                    </tr>
+                    <tr>
+                        <td>GD-one partner Poland</td>
+                        <td>Водитель</td>
+                        <td>2022 - 2023</td>
+                    </tr>
+                    <tr>
+                        <td>Велес 2010</td>
+                        <td>Водитель</td>
+                        <td>2024 - 2024</td>
+                    </tr>
+                </tbody>
+            </table><br>
+        </div>
+
+        <form action="/" class="form">
+            <h2>Связаться со мной</h2>
+            <div class="row">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder=" ">
+                    <label for="name">Ваше Имя</label>
+                </div>
+        
+                <div class="form-group">
+                    <input type="email" id="email" placeholder=" ">
+                    <label for="email">Ваш Email</label>
+                </div>
+            </div>
+                <div class="form-group">
+                    <textarea id="message" cols="20" rows="5" placeholder=" "></textarea>
+                    <label for="message">Ваше сообщение...</label>
+                </div>
+               
+            <input class="btn" type="submit" value="Отправить">
+        </form>
+    </div>
+</body>
+</html>
