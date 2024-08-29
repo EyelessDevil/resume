@@ -9,15 +9,9 @@
 
 .header {
     display: flex;
-    /* position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2; */
-    /* border: 1px solid rgba(0, 255, 255, 0.2); */
     border-top: none;
     background: rgba(0, 255, 255, 0.2);
-    justify-content: space-between; /* Равномерно распределяет кнопки */
+    justify-content: space-between;
     margin-bottom: 40px;
     height: 50px;
     width: 100%;
@@ -36,12 +30,11 @@
     font-size: 20px;
     transition: background-color 0.3s ease;
     text-align: center;
-    flex: 0.85; /* Кнопка занимает равную часть доступного пространства */
-    /* margin: 0 5px; */
+    flex: 0.85;
 }
 
 .header-btn:last-child {
-    margin-right: 0; /* Убирает правый отступ у последней кнопки */
+    margin-right: 0;
     border: none;
 }
 
@@ -53,12 +46,12 @@
 
 .dropdown {
     position: relative;
-    flex: 1; /* Dropdown занимает равную часть доступного пространства */
+    flex: 1;
 }
 
 .dropdown-btn {
     height: 50px;
-    width: 100%; /* Кнопка занимает всю ширину родительского div */
+    width: 100%;
 }
 
 @media(max-width: 700px) {
@@ -78,9 +71,9 @@
     background: rgba(0, 114, 114, 0.91);
     border-radius: 0 0 10px 10px;
     z-index: 1;
-    top: 100%; /* Располагает выпадающее меню под кнопкой */
+    top: 100%;
     left: 0;
-    width: 100%; /* Меню будет той же ширины, что и кнопка */
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -116,7 +109,6 @@
 #email.highlight,
 #message.highlight {
     box-shadow: 0 0 14px aqua;
-    /* transition: box-shadow 1.5s ease; */
     transition-duration: 0.7s; /* Не смог сделать плавное исчезновение*/
 }
 
@@ -245,10 +237,6 @@ a:hover {
     outline: none;
 }
 
-/* .form-group input:invalid {
-    border-color: red;
-} */
-
 .row {
     display: flex;
 }
@@ -272,11 +260,6 @@ a:hover {
     }
 }
 
-/* .form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.827)
-} */
-
 .form-group {
     position: relative;
     margin-bottom: 30px;
@@ -292,7 +275,7 @@ a:hover {
     top: 10px;
     left: 10px;
     color: rgba(255, 255, 255, 0.827);
-    transition: all 0.3s ease; /* Анимация перемещения */
+    transition: all 0.3s ease;
     pointer-events: none;
 }
 
