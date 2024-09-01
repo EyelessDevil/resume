@@ -27,7 +27,7 @@
         </header>
 
         <div class="info">
-            <img class="avatar" src="imgs/IMGL3242.jpg" alt="Моё фото">
+            <img class="avatar" src="imgs/avatar.jpg" alt="Моё фото">
             <div class="info-text">
                 <h1>Рома Ли</h1>
                 <p>Я начинающий <strong>JavaScript Developer</strong> и будущий <strong>Frontend разработчик</strong></p>
@@ -68,6 +68,11 @@
 
                 <tbody>
                     <tr>
+                        <td>ОАО Беллакт</td>
+                        <td>Механик</td>
+                        <td>2018 - 2019</td>
+                    </tr>
+                    <tr>
                         <td>ОАО КСМ</td>
                         <td>Разнорабочий</td>
                         <td>2019 - 2020</td>
@@ -75,7 +80,7 @@
                     <tr>
                         <td>Domino's Pizza</td>
                         <td>Курьер</td>
-                        <td>2020 - 2020</td>
+                        <td>2020</td>
 
                     </tr>
                     <tr>
@@ -87,7 +92,7 @@
                     <tr>
                         <td>COLIZEUM</td>
                         <td>Администратор</td>
-                        <td>2022 - 2022</td>
+                        <td>2022</td>
 
                     </tr>
                     <tr>
@@ -98,32 +103,42 @@
                     <tr>
                         <td>Велес 2010</td>
                         <td>Водитель</td>
-                        <td>2024 - 2024</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>C4 RML</td>
+                        <td>Scrip developer & Criptanalyst</td>
+                        <td>2022 - по н.в.</td>
                     </tr>
                 </tbody>
             </table><br>
         </div>
 
-        <form action="/" class="form">
+        <form action="https://getform.io/f/ajjevvpa" class="form" id="myForm" method="POST">
             <h2>Связаться со мной</h2>
             <div class="row">
                 <div class="form-group">
-                    <input type="text" id="name" placeholder=" ">
+                    <input type="text" name="name" id="name" placeholder=" ">
                     <label for="name">Ваше Имя</label>
                 </div>
         
                 <div class="form-group">
-                    <input type="email" id="email" placeholder=" ">
+                    <input type="email" name="email" id="email" placeholder=" ">
                     <label for="email">Ваш Email</label>
                 </div>
             </div>
                 <div class="form-group">
-                    <textarea id="message" cols="20" rows="5" placeholder=" "></textarea>
+                    <textarea name="message" id="message" cols="20" rows="5" placeholder=" "></textarea>
                     <label for="message">Ваше сообщение...</label>
                 </div>
                
             <input class="btn" type="submit" value="Отправить">
         </form>
+        <div id="overlay" class="overlay"></div>
+        <div id="popup" class="popup">
+            <p>Ваш ответ записан!</p>
+            <img src="imgs/pngwing.com.png" alt="done">
+        </div>
     </div>
 </body>
 </html>
