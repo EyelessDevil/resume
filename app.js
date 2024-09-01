@@ -32,37 +32,52 @@ contact.addEventListener("click", function() {
 // Визуал для формы
 form.addEventListener('submit', function(event) {
     
-    event.preventDefault(); // Предотвращает отправку формы
+    event.preventDefault() // Предотвращает отправку формы
 
-    let isValid = true;
+    let isValid = true
 
     // Проверка поля имени
     if (nameInput.value.trim() === '') {
-        nameInput.classList.add('error');
+        nameInput.classList.add('error')
         isValid = false;
     } else {
-        nameInput.classList.remove('error');
+        nameInput.classList.remove('error')
     }
 
     // Проверка поля email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value)) {
-        emailInput.classList.add('error');
-        isValid = false;
+        emailInput.classList.add('error')
+        isValid = false
         window.alert('Заполните правильно форму. Ну или не заполняйте. Как хотите в принципе')
     } else {
-        emailInput.classList.remove('error');
+        emailInput.classList.remove('error')
     }
 
     // Проверка поня сообщения
     if (messageInput.value.trim() === '') {
-        messageInput.classList.add('error');
+        messageInput.classList.add('error')
         isValid = false;
     } else {
-        messageInput.classList.remove('error');
+        messageInput.classList.remove('error')
     }
 
     if(isValid) {
+
+        //Отправляем форму асинхронно
+        form.addEventListener('submit', async function (event) {
+            try {
+                const response = await fetch('https://formspree.io/f/mrbzdzeb', {
+                    method: 'POST',
+                    body: new FormData(event.target),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+            } catch (error) {
+
+            }
+        })
 
         // Вычисляет позицию для центрирования окна относительно текущего положения на странице
         const scrollY = window.scrollY || window.pageYOffset
@@ -92,7 +107,7 @@ form.addEventListener('submit', function(event) {
                 overlay.style.display = 'none'
                 popup.style.display = 'none'
             }, 500) // Дает время завершиться анимации
-            document.getElementById('myForm').reset() // Сбрасывает форму
+            form.reset() // Сбрасывает форму
         }, 3000)
     }
 })
@@ -109,5 +124,5 @@ form.addEventListener('click', removeErrorClassAll)
     3. Убрать залипание клавишь
     4. Обработать кнопку что-то еще
     5. Добавить ссылку на гит  
-    6. Обработать отправку формы
+    6. Обработать отправку формы DONE!!!
 */
