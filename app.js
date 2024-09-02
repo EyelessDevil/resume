@@ -32,7 +32,7 @@ contact.addEventListener("click", function() {
 // Визуал для формы
 form.addEventListener('submit', function(event) {
     
-    event.preventDefault() // Предотвращает отправку формы
+    event.preventDefault() // Предотвращает отправку формы по дефолту
 
     let isValid = true
 
@@ -64,21 +64,20 @@ form.addEventListener('submit', function(event) {
 
     if(isValid) {
 
-        //Отправляем форму асинхронно
-        form.addEventListener('submit', async function (event) {
-            try {
-                const response = await fetch('https://formspree.io/f/mrbzdzeb', {
-                    method: 'POST',
-                    body: new FormData(event.target),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-            } catch (error) {
-
-            }
-        })
-
+        // Отправка формы мне на почту
+        const formData = new FormData(this)
+        const entries = [...formData.entries()]
+        const data = entries.map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`).join('&')
+    
+        fetch('https://script.google.com/macros/s/AKfycbx0PZErU1o_JG0e4Vp7ECFp4KjbawZJ2yxaRVVG3uxhs4ssHgIdo98deQfluhoII-n2Tw/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: data
+        }).then(response => response.json())
+        .then(data => console.log('Form submitted successfully'))
+        .catch(error => console.log('Error: ' + error.message))
+              
+              
         // Вычисляет позицию для центрирования окна относительно текущего положения на странице
         const scrollY = window.scrollY || window.pageYOffset
         const viewportHeight = window.innerHeight
