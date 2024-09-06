@@ -1,10 +1,16 @@
 const form = document.querySelector('#myForm')
+const git = document.querySelector('#github')
 const nameInput = document.getElementById("name")
 const emailInput = document.getElementById("email")
 const messageInput = document.getElementById("message")
 const overlay = document.getElementById('overlay')
 const popup = document.getElementById('popup')
 const contact = document.getElementById("contact-btn")
+
+git.addEventListener('click', () => {
+    // window.location.href = 'https://github.com/EyelessDevil/resume'
+    window.open('https://github.com/EyelessDevil/resume', '_blank')
+})
 
 // Скролл вниз для кнопки
 contact.addEventListener("click", function() {
@@ -117,11 +123,3 @@ function removeErrorClassAll() {
 }
 
 form.addEventListener('click', removeErrorClassAll)
-
-/*  1. Уменьшить размер авы DONE!!!
-    2. Избавиться от белого фона при вставке с гугла DONE!!!
-    3. Убрать залипание клавишь
-    4. Обработать кнопку что-то еще
-    5. Добавить ссылку на гит  
-    6. Обработать отправку формы DONE!!!
-*/

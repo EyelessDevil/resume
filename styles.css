@@ -182,12 +182,6 @@ body {
     width: 100%;
 }
 
-.table thead th{
-    font-size: 18px;
-    text-align: left;
-    padding-bottom: 10px;
-}
-
 .table td {
     padding-bottom: 10px;
 }
